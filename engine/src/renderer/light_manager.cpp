@@ -64,8 +64,8 @@ void LightManager::DrawLightBillboards(Light* light)
 	const float minScaleFactor = 0.2f;
 	const float maxScaleFactor = 5.f;
 	float dist = (lightPos - cam->GetPosition()).Magnitude();
-	float fallOfScaleFactor = std::clamp(dist / 10.f, minScaleFactor, maxScaleFactor);
-	float fallOfAlpha = static_cast<float>(std::clamp(dist / 2.0 - 1.0, 0.0, 1.0));
+	float fallOfScaleFactor = std::clamp(dist * 0.1f, minScaleFactor, maxScaleFactor);
+	float fallOfAlpha = std::clamp(dist * 0.5f - 1.0f, 0.0f, 1.0f);
 
 	light->SetBillboardAlpha(fallOfAlpha);
 	light->SetBillboardScale(fallOfScaleFactor);

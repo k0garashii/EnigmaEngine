@@ -28,5 +28,5 @@ private:
 	std::vector<Math::Matrix4x4> GetLightSpaceMatrices(const CameraProxy& camera, Light* light);
 
 	std::vector<float> shadowCascadeLevels;
-	const float shadowDistance = 1000.f;
+	const float shadowDistance = 500.f;
 };
