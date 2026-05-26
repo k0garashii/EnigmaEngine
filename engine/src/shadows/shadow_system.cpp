@@ -20,7 +20,7 @@ void ShadowSystem::Create(EnigmaRHI::IRenderInterface* rhi)
 
     EnigmaRHI::GraphicsPipeline depthDesc
     {
-        .cullMode = EnigmaRHI::ECullMode::DISABLED,
+        .cullMode = EnigmaRHI::ECullMode::BACK,
         .frontFaceMode = EnigmaRHI::EFrontFaceMode::COUNTER_CLOCK_WISE,
         .depthTestEnable = true,
         .depthWriteEnable = true,
